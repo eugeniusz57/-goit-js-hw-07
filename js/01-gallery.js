@@ -22,7 +22,7 @@ const makeGaleryMarkup = ({preview, original, description}) => {
 const makeGaleryGreed = galleryItems.map(makeGaleryMarkup).join("");
 divContainer.innerHTML = makeGaleryGreed ;
 
-
+//delegation
 divContainer.addEventListener('click', onClickImg)
 
 function onClickImg(e){
@@ -31,7 +31,7 @@ function onClickImg(e){
   if(e.target.nodeName !== "IMG"){
   return;
   }
-  
+//open modal window
   const src = e.target.dataset.source;
   const instance = basicLightbox.create(`
       <img src="${src}" width="800" height="600">
